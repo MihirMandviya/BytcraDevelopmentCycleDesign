@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    float: left;
+    margin: 30px 20px 20px 20px;
+}
+
+body {
+    background-color: #00151A;
+    color: #fff;
+}
+
+.timeline {
+    float: left;
+    width: 100%;
+}
+
+.timeline ul li {
+    width: auto;
+    height: 100%;
+    float: inherit;
+}
+
+.timeline ul li .content {
+    line-height: 1.5;
+}
+
+.timeline ul li:nth-child(odd) .content {
+    float: left;
+    width: 50%;
+}
+
+.timeline ul li:nth-child(even) .content {
+    float: right;
+    width: 50%;
+}
+
+.timeline ul li:nth-child(odd) .process {
+    float: right;
+    width: 44%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.timeline ul li:nth-child(even) .process {
+    float: left;
+    width: 44%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.timeline ul li:nth-child(odd) .content .circle_upper {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #66E2FF;
+    float: inherit;
+}
+
+.timeline ul li:nth-child(odd) .content .circle_lower {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #66E2FF;
+    float: inherit;
+}
+
+.timeline ul li:nth-child(even) .content .circle {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #66E2FF;
+    float: right;
+}
+
+.timeline ul li:nth-child(odd) .content hr {
+    width: 88%;
+    float: left;
+}
+
+.timeline ul li:nth-child(even) .content hr {
+    width: 86%;
+    float: right;
+}
+
+.timeline ul li:nth-child(odd) .content .hexaimg {
+    height: 150px;
+    width: 150px;
+    float: right;
+}
+
+.timeline ul li:nth-child(even) .content .hexaimg {
+    height: 150px;
+    width: 150px;
+    float: left;
+}
+
+.timeline ul li .content .hexaimg img {
+    height: 120%;
+    width: auto;
+}
+
+.timeline ul li .content .wrapper {
+    width: calc(100% - 160px);
+    float: left;
+}
