@@ -1,111 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style: none;
-    float: left;
-    margin: 30px 20px 20px 20px;
-}
-
-body {
-    background-color: #00151A;
-    color: #fff;
-}
-
 .timeline {
-    float: left;
-    width: 100%;
-}
-
-.timeline ul li {
-    width: auto;
+    background-color: #00151A;
     height: 100%;
-    float: inherit;
+    width: 100%;
+    max-width: 1100px;
+    padding: 100px;
+    margin: 0 auto;
+    display: table;
 }
 
-.timeline ul li .content {
-    line-height: 1.5;
-}
-
-.timeline ul li:nth-child(odd) .content {
+.left_wrapper {
+    color: white;
+    width: 52%;
     float: left;
-    width: 50%;
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.timeline ul li:nth-child(even) .content {
-    float: right;
-    width: 50%;
+.wrapper {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
 }
 
-.timeline ul li:nth-child(odd) .process {
+.right_wrapper {
+    width: 46%;
     float: right;
-    width: 44%;
     text-align: center;
-    line-height: 1.5;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
 }
 
-.timeline ul li:nth-child(even) .process {
+.left_text {
+    width: 200px;
     float: left;
-    width: 44%;
-    text-align: center;
-    line-height: 1.5;
+    position: relative;
+    padding: 15px 0 15px 40px;
 }
 
-.timeline ul li:nth-child(odd) .content .circle_upper {
+.left_text:after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    border: 2px solid #66E2FF;
-    float: inherit;
+    left: -5px;
+    top: -12px;
+    border: 1px solid #66E2FF;
 }
 
-.timeline ul li:nth-child(odd) .content .circle_lower {
+.left_text:before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    border: 2px solid #66E2FF;
-    float: inherit;
+    left: -5px;
+    bottom: -12px;
+    border: 1px solid #66E2FF;
 }
 
-.timeline ul li:nth-child(even) .content .circle {
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    border: 2px solid #66E2FF;
+.left_wrapper:after {
+    content: "";
+    position: absolute;
+    background: #66E2FF;
+    width: calc(100% - 100px);
+    height: 2px;
+    left: 10px;
+    top: 0;
+}
+
+.left_wrapper:before {
+    content: "";
+    position: absolute;
+    background: #66E2FF;
+    width: calc(100% - 100px);
+    height: 2px;
+    left: 10px;
+    bottom: 3px;
+}
+
+.imgage_hexa img {
+    width: 100%;
+    height: auto;
+}
+
+.imgage_hexa {
+    width: 180px;
     float: right;
 }
 
-.timeline ul li:nth-child(odd) .content hr {
-    width: 88%;
-    float: left;
+.reverse .left_wrapper {
+    order: 1;
 }
 
-.timeline ul li:nth-child(even) .content hr {
-    width: 86%;
-    float: right;
+.reverse .left_wrapper .left_text {
+    order: 2;
+    padding: 15px 40px 15px 0;
 }
 
-.timeline ul li:nth-child(odd) .content .hexaimg {
-    height: 150px;
-    width: 150px;
-    float: right;
+.reverse .left_wrapper:after {
+    right: 10px;
+    bottom: -12px;
+    left: unset;
 }
 
-.timeline ul li:nth-child(even) .content .hexaimg {
-    height: 150px;
-    width: 150px;
-    float: left;
+.reverse .left_wrapper:before {
+    right: 10px;
+    bottom: 0;
+    left: unset;
 }
 
-.timeline ul li .content .hexaimg img {
-    height: 120%;
-    width: auto;
+.reverse .left_text:after {
+    right: -5px;
+    left: unset;
 }
 
-.timeline ul li .content .wrapper {
-    width: calc(100% - 160px);
-    float: left;
+.reverse .left_text:before {
+    right: -5px;
+    left: unset;
 }
